@@ -1,0 +1,973 @@
+Dimensions:
+FrozenMappingWarningOnValuesAccess({'time': 6147, 'range': 500})
+
+Coordonnées:
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+
+Variables de données:
+
+Variable: lng_latitude_2D
+<xarray.DataArray 'lng_latitude_2D' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           degree
+    long_name:       latitude of the lidar data
+    comments:        On the radar grid
+    missing_values:  -999.0
+
+Variable: lng_height_2D
+<xarray.DataArray 'lng_height_2D' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           km
+    long_name:       altitude of the lidar data
+    comments:        After co-location on the radar grid
+    missing_values:  -999.0
+
+Variable: lng_LOS_Doppler_Velocity
+<xarray.DataArray 'lng_LOS_Doppler_Velocity' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m/s
+    long_name:       LNG HSR Doppler measurement corrected from aircraft motion
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_atmospheric_contrast
+<xarray.DataArray 'lng_atmospheric_contrast' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Atmospheric contrast
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_depol_part
+<xarray.DataArray 'lng_depol_part' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Particulate depolarisation 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_depol_total
+<xarray.DataArray 'lng_depol_total' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Total depolarisation 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_mask_532
+<xarray.DataArray 'lng_mask_532' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           None
+    long_name:       Target Mask 532 nm: -3: negative range / -2: noise / -1:...
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_mask_355
+<xarray.DataArray 'lng_mask_355' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           None
+    long_name:       Target Mask 355 nm: -3: negative range / -2: noise / -1:...
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_mask_hsr
+<xarray.DataArray 'lng_mask_hsr' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Mask high spectral resolution 355 nm: -3: noise/-2: nega...
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_mask_depol
+<xarray.DataArray 'lng_mask_depol' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Depolarisation mask: -2: negative range / -1: close rang...
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_target_classification_532
+<xarray.DataArray 'lng_target_classification_532' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Target classification 532 nm: -4: noise/-3: negative ran...
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_target_classification_355
+<xarray.DataArray 'lng_target_classification_355' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Target classification 355 nm: -4: noise/-3: negative ran...
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_mask_Doppler
+<xarray.DataArray 'lng_mask_Doppler' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Doppler Mask - based on SNR and contrast - 0: noise/ 1:n...
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_pointing
+<xarray.DataArray 'lng_pointing' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           none
+    long_name:       Pointing direction of the instrument (Nadir 1 Zenith 2)
+    comments:        
+    missing_values:  -999.0
+
+Variable: height_2D
+<xarray.DataArray 'height_2D' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           km
+    long_name:       Altitude of the centre of each range gate
+    comments:        
+    missing_values:  -999.0
+
+Variable: range_2D
+<xarray.DataArray 'range_2D' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           km
+    long_name:       Range from aircraft (Nadir and Zenith antennas)
+    comments:        
+    missing_values:  -999.0
+
+Variable: latitude
+<xarray.DataArray 'latitude' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           degrees north
+    long_name:       Latitude of the aircraft
+    comments:        from Global Positioning System (GPS)
+    missing_values:  -999.0
+
+Variable: longitude
+<xarray.DataArray 'longitude' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           degrees east
+    long_name:       Longitude of the aircraft
+    comments:        from Global Positioning System (GPS)
+    missing_values:  -999.0
+
+Variable: altitude
+<xarray.DataArray 'altitude' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           km
+    long_name:       Height of the aircraft above geoid
+    comments:        from Global Positioning System (GPS)
+    missing_values:  -999.0
+
+Variable: latitude_2D
+<xarray.DataArray 'latitude_2D' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           degrees north
+    long_name:       Latitude of Nadir and Zenith antennas data
+    comments:        from Global Positioning System (GPS)
+    missing_values:  -999.0
+
+Variable: longitude_2D
+<xarray.DataArray 'longitude_2D' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           degrees east
+    long_name:       Longitude of Nadir and Zenith antennas data
+    comments:        from Global Positioning System (GPS)
+    missing_values:  -999.0
+
+Variable: aircraft_vh
+<xarray.DataArray 'aircraft_vh' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           m s-1
+    long_name:       Aircraft horizontal speed
+    comments:        from Global Positioning System (GPS)
+    missing_values:  -999.0
+
+Variable: aircraft_vz
+<xarray.DataArray 'aircraft_vz' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           m s-1
+    long_name:       Aircraft vertical speed
+    comments:        from Global Positioning System (GPS)
+    missing_values:  -999.0
+
+Variable: heading
+<xarray.DataArray 'heading' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           degrees
+    long_name:       Aircraft heading angle
+    comments:        From Inertial Navigation System (INS): relative to geogr...
+    missing_values:  -999.0
+
+Variable: roll
+<xarray.DataArray 'roll' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           degrees
+    long_name:       Aircraft roll angle
+    comments:        From Inertial Navigation System (INS): positive when the...
+    missing_values:  -999.0
+
+Variable: pitch
+<xarray.DataArray 'pitch' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           degrees
+    long_name:       Aircraft pitch angle
+    comments:        From Inertial Navigation System (INS): positive when the...
+    missing_values:  -999.0
+
+Variable: eastward_wind
+<xarray.DataArray 'eastward_wind' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           m s-1
+    long_name:       In-situ Eastward Wind Component (positive when westerly)
+    comments:        
+    missing_values:  -999.0
+
+Variable: northward_wind
+<xarray.DataArray 'northward_wind' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           m s-1
+    long_name:       In-situ Northward Wind Component (positive when southerly)
+    comments:        
+    missing_values:  -999.0
+
+Variable: temperature_field
+<xarray.DataArray 'temperature_field' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           degrees Celcius
+    long_name:       Air temperature ERA5
+    comments:        Averaged temperature
+    missing_values:  -999.0
+
+Variable: rh_field
+<xarray.DataArray 'rh_field' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           percent
+    long_name:       Relative humidity ERA5
+    comments:        Relative humidiy
+    missing_values:  -999.0
+
+Variable: pressure_field
+<xarray.DataArray 'pressure_field' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           hPa
+    long_name:       Air pressure field ERA5
+    comments:        Averaged pressure 
+    missing_values:  -999.0
+
+Variable: time_difference_radar_lidar
+<xarray.DataArray 'time_difference_radar_lidar' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           s
+    long_name:       time difference between radar and lidar data
+    comments:        
+    missing_values:  -999.0
+
+Variable: distance_radar_lidar
+<xarray.DataArray 'distance_radar_lidar' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m
+    long_name:       horizontal distance between radar and lidar data
+    comments:        distance obtained after colocation in time and altitude
+    missing_values:  -999.0
+
+Variable: height_ground
+<xarray.DataArray 'height_ground' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           km
+    long_name:       Ground elevation
+    comments:        SRTM data - http://www.viewfinderpanoramas.org/Coverage%...
+    missing_values:  -999.0
+
+Variable: rali_instrument_flag_532
+<xarray.DataArray 'rali_instrument_flag_532' (time: 6147, range: 500)> Size: 25MB
+[3073500 values with dtype=float64]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Radar-lidar instrument flag (532 nm)
+    comments:        -10:unknown/-9:no radar and no lidar/-8:subsurface only ...
+    missing_values:  -11
+
+Variable: rali_instrument_flag_355
+<xarray.DataArray 'rali_instrument_flag_355' (time: 6147, range: 500)> Size: 25MB
+[3073500 values with dtype=float64]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Radar-lidar instrument flag (355 nm)
+    comments:        -10:unknown/-9:no radar and no lidar/-8:subsurface only ...
+    missing_values:  -11
+
+Variable: rali_target_classification_532
+<xarray.DataArray 'rali_target_classification_532' (time: 6147, range: 500)> Size: 25MB
+[3073500 values with dtype=float64]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Radar-lidar target classification (532 nm)
+    comments:        -6: unknown/-5: underground no signal/-4: underground (r...
+    missing_values:  -9
+
+Variable: rali_target_classification_355
+<xarray.DataArray 'rali_target_classification_355' (time: 6147, range: 500)> Size: 25MB
+[3073500 values with dtype=float64]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Radar-lidar target classification (355 nm)
+    comments:        -6: unknown/-5: underground no signal/-4: underground (r...
+    missing_values:  -9
+
+Variable: rasta_flag
+<xarray.DataArray 'rasta_flag' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Flag - Data description
+    comments:        -4: nadir not available / -3: Last gates not valid / -2:...
+    missing_values:  -999.0
+
+Variable: rasta_flag_Z_interpolated
+<xarray.DataArray 'rasta_flag_Z_interpolated' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Flag dedicated to interpolated Z
+    comments:        0: no interpolation / 1: interpolated but data available...
+    missing_values:  -999.0
+
+Variable: rasta_mask_domain
+<xarray.DataArray 'rasta_mask_domain' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Domain Mask
+    comments:        This mask identifies the valid data above and below the ...
+    missing_values:  -999.0
+
+Variable: rasta_mask_horizontal_wind
+<xarray.DataArray 'rasta_mask_horizontal_wind' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Mask for the horizontal wind
+    comments:        1: good confidence /-1: should not be used
+    missing_values:  -999.0
+
+Variable: rasta_mask_Vz
+<xarray.DataArray 'rasta_mask_Vz' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Mask for the Vz component of the wind
+    comments:        1: good confidence /-1: should not be used/-2: should no...
+    missing_values:  -999.0
+
+Variable: rasta_melting_altitude
+<xarray.DataArray 'rasta_melting_altitude' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           km
+    long_name:       Melting layer altitude
+    comments:        Altitude of the melting layer (derived from Z, V and mod...
+    missing_values:  -999.0
+
+Variable: rasta_Vz
+<xarray.DataArray 'rasta_Vz' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m s-1
+    long_name:       Vz, Vertical component of the retrieved 3D wind
+    comments:        Vz, positive upward
+    missing_values:  -999.0
+
+Variable: rasta_VE
+<xarray.DataArray 'rasta_VE' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m s-1
+    long_name:       VE, Eastward Wind component of the retrieved 3D wind
+    comments:        
+    missing_values:  -999.0
+
+Variable: rasta_VN
+<xarray.DataArray 'rasta_VN' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m s-1
+    long_name:       VN, Northward Wind component of the retrieved 3D wind
+    comments:        
+    missing_values:  -999.0
+
+Variable: rasta_ocean_surface_reflectivity
+<xarray.DataArray 'rasta_ocean_surface_reflectivity' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           dBZ
+    long_name:       Ocean surface reflectivity measured by nadir antenna
+    comments:        ground return peak and gates in the neighbourhood
+    missing_values:  -999.0
+
+Variable: rasta_ocean_surface_reflectivity_model
+<xarray.DataArray 'rasta_ocean_surface_reflectivity_model' (time: 6147)> Size: 25kB
+[6147 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+Attributes:
+    units:           dBZ
+    long_name:       Simulated Ocean surface reflectivity
+    comments:        radar wind is used to parameterise the s0 model (not cor...
+    missing_values:  -999.0
+
+Variable: rasta_wind_direction
+<xarray.DataArray 'rasta_wind_direction' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           degrees
+    long_name:       Direction of the retrieved 3D wind
+    comments:        
+    missing_values:  -999.0
+
+Variable: rasta_wind_speed
+<xarray.DataArray 'rasta_wind_speed' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m s-1
+    long_name:       Speed of the retrieved 3D wind
+    comments:        
+    missing_values:  -999.0
+
+Variable: rasta_gaseous_twowayatt
+<xarray.DataArray 'rasta_gaseous_twowayatt' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           dB
+    long_name:       Gaseous two way attenuation ERA5
+    comments:        From Liebe at 95GHz
+    missing_values:  -999.0
+
+Variable: rasta_classification_flag
+<xarray.DataArray 'rasta_classification_flag' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Radar classification flag
+    comments:        -4: ghost ground echo (upward domain) / -3: ghost ground...
+    missing_values:  -999.0
+
+Variable: rasta_classification_flag_updated
+<xarray.DataArray 'rasta_classification_flag_updated' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           none
+    long_name:       Updated radar classification flag for combination with l...
+    comments:        -7: nadir not available / -6: beyond maximum range / -5:...
+    missing_values:  -9
+
+Variable: lng_cal_att_back_355_cross
+<xarray.DataArray 'lng_cal_att_back_355_cross' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m-1 sr-1
+    long_name:       calibrated cross attenuated backscatter 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_cal_att_back_355_par
+<xarray.DataArray 'lng_cal_att_back_355_par' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m-1 sr-1
+    long_name:       calibrated parallel attenuated backscatter 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_cal_att_back_532
+<xarray.DataArray 'lng_cal_att_back_532' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m-1 sr-1
+    long_name:       calibrated attenuated backscatter 532
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_cal_att_mol_back_355
+<xarray.DataArray 'lng_cal_att_mol_back_355' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m-1 sr-1
+    long_name:       calibrated total attenuated molecular backscatter 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_cal_att_mol_back_355_cross
+<xarray.DataArray 'lng_cal_att_mol_back_355_cross' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m-1 sr-1
+    long_name:       calibrated cross attenuated molecular backscatter 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_cal_att_mol_back_355_par
+<xarray.DataArray 'lng_cal_att_mol_back_355_par' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m-1 sr-1
+    long_name:       calibrated parallel attenuated molecular backscatter 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_cal_att_part_back_355
+<xarray.DataArray 'lng_cal_att_part_back_355' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m-1 sr-1
+    long_name:       calibrated total attenuated particular backscatter 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_cal_att_part_back_355_cross
+<xarray.DataArray 'lng_cal_att_part_back_355_cross' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m-1 sr-1
+    long_name:       calibrated cross attenuated particular backscatter 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: lng_cal_att_part_back_355_par
+<xarray.DataArray 'lng_cal_att_part_back_355_par' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           m-1 sr-1
+    long_name:       calibrated parallel attenuated particular backscatter 355
+    comments:        
+    missing_values:  -999.0
+
+Variable: rasta_Z
+<xarray.DataArray 'rasta_Z' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           dBZ
+    long_name:       Radar reflectivity
+    comments:        Produced using the Pulse-Pair Processing. Range-correcte...
+    missing_values:  -999.0
+
+Variable: rasta_Z_interpolated
+<xarray.DataArray 'rasta_Z_interpolated' (time: 6147, range: 500)> Size: 12MB
+[3073500 values with dtype=float32]
+Coordinates:
+  * time     (time) float32 25kB 6.335e+04 6.335e+04 ... 7.455e+04 7.456e+04
+  * range    (range) float32 2kB -14.97 -14.91 -14.85 ... 14.85 14.91 14.97
+Attributes:
+    units:           dBZ
+    long_name:       Radar reflectivity (interpolated when possible between u...
+    comments:        Produced using the Pulse-Pair Processing. Range-correcte...
+    missing_values:  -999.0
+
+Attributs globaux:
+{'Description': 'RADAR-LIDAR-co-located-data-and-target classification', 'Author': 'julien.delanoe@latmos.ipsl.fr', 'Campaign': 'MAESTRO', 'Day': '20240910', 'Flight': '46', 'Thermo': 'ERA5', 'radar_input_file': 'MAESTRO_20240910_F46_RASTA_WIND_final_06.4.1.nc', 'lidar_input_file': 'LNG_L2_HSRL_F46_20240910_range_av_15_nshots_100_v5.5.nc'}
+
+Attributs des variables:
+
+Variable: lng_latitude_2D
+{'units': 'degree', 'long_name': 'latitude of the lidar data', 'comments': 'On the radar grid', 'missing_values': '-999.0'}
+
+Variable: lng_height_2D
+{'units': 'km', 'long_name': 'altitude of the lidar data', 'comments': 'After co-location on the radar grid', 'missing_values': '-999.0'}
+
+Variable: lng_LOS_Doppler_Velocity
+{'units': 'm/s', 'long_name': 'LNG HSR Doppler measurement corrected from aircraft motion', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_atmospheric_contrast
+{'units': 'none', 'long_name': 'Atmospheric contrast', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_depol_part
+{'units': 'none', 'long_name': 'Particulate depolarisation 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_depol_total
+{'units': 'none', 'long_name': 'Total depolarisation 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_mask_532
+{'units': 'None', 'long_name': 'Target Mask 532 nm: -3: negative range / -2: noise / -1: close range / 0: attenuated / 1: pure molecular / 2: maybe particulate/ 3: particulate/ 4: do not know if molecular', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_mask_355
+{'units': 'None', 'long_name': 'Target Mask 355 nm: -3: negative range / -2: noise / -1: close range / 0: attenuated / 1: pure molecular / 2: maybe particulate/ 3: particulate/ 4: do not know if molecular', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_mask_hsr
+{'units': 'none', 'long_name': 'Mask high spectral resolution 355 nm: -3: noise/-2: negative range/-1: close range/0: only molecular/1: both particular and molecular/2: only particular', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_mask_depol
+{'units': 'none', 'long_name': 'Depolarisation mask: -2: negative range / -1: close range / 0: noise / 1: molecular / 2: part ', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_target_classification_532
+{'units': 'none', 'long_name': 'Target classification 532 nm: -4: noise/-3: negative range/-2: extinguished signal/-1: close range/0: attenuated molecular/1: pure molecular/2: liquid warm/3: ice cloud/4: supercooled layer/5: possible aerosol/6: aerosol/7: surface echo/8: subsurface', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_target_classification_355
+{'units': 'none', 'long_name': 'Target classification 355 nm: -4: noise/-3: negative range/-2: extinguished signal/-1: close range/0: attenuated molecular/1: pure molecular/2: liquid warm/3: ice cloud/4: supercooled layer/5: possible aerosol/6: aerosol/7: surface echo/8: subsurface', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_mask_Doppler
+{'units': 'none', 'long_name': 'Doppler Mask - based on SNR and contrast - 0: noise/ 1:not good confidence Doppler / 2: Doppler could be used', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_pointing
+{'units': 'none', 'long_name': 'Pointing direction of the instrument (Nadir 1 Zenith 2)', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: height_2D
+{'units': 'km', 'long_name': 'Altitude of the centre of each range gate', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: range_2D
+{'units': 'km', 'long_name': 'Range from aircraft (Nadir and Zenith antennas)', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: latitude
+{'units': 'degrees north', 'long_name': 'Latitude of the aircraft', 'comments': 'from Global Positioning System (GPS)', 'missing_values': '-999.0'}
+
+Variable: longitude
+{'units': 'degrees east', 'long_name': 'Longitude of the aircraft', 'comments': 'from Global Positioning System (GPS)', 'missing_values': '-999.0'}
+
+Variable: altitude
+{'units': 'km', 'long_name': 'Height of the aircraft above geoid', 'comments': 'from Global Positioning System (GPS)', 'missing_values': '-999.0'}
+
+Variable: latitude_2D
+{'units': 'degrees north', 'long_name': 'Latitude of Nadir and Zenith antennas data', 'comments': 'from Global Positioning System (GPS)', 'missing_values': '-999.0'}
+
+Variable: longitude_2D
+{'units': 'degrees east', 'long_name': 'Longitude of Nadir and Zenith antennas data', 'comments': 'from Global Positioning System (GPS)', 'missing_values': '-999.0'}
+
+Variable: aircraft_vh
+{'units': 'm s-1', 'long_name': 'Aircraft horizontal speed', 'comments': 'from Global Positioning System (GPS)', 'missing_values': '-999.0'}
+
+Variable: aircraft_vz
+{'units': 'm s-1', 'long_name': 'Aircraft vertical speed', 'comments': 'from Global Positioning System (GPS)', 'missing_values': '-999.0'}
+
+Variable: heading
+{'units': 'degrees', 'long_name': 'Aircraft heading angle', 'comments': 'From Inertial Navigation System (INS): relative to geographical North, positive clockwise', 'missing_values': '-999.0'}
+
+Variable: roll
+{'units': 'degrees', 'long_name': 'Aircraft roll angle', 'comments': 'From Inertial Navigation System (INS): positive when the starboard wing is down', 'missing_values': '-999.0'}
+
+Variable: pitch
+{'units': 'degrees', 'long_name': 'Aircraft pitch angle', 'comments': 'From Inertial Navigation System (INS): positive when the aircraft nose is up', 'missing_values': '-999.0'}
+
+Variable: eastward_wind
+{'units': 'm s-1', 'long_name': 'In-situ Eastward Wind Component (positive when westerly)', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: northward_wind
+{'units': 'm s-1', 'long_name': 'In-situ Northward Wind Component (positive when southerly)', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: temperature_field
+{'units': 'degrees Celcius', 'long_name': 'Air temperature ERA5', 'comments': 'Averaged temperature', 'missing_values': '-999.0'}
+
+Variable: rh_field
+{'units': 'percent', 'long_name': 'Relative humidity ERA5', 'comments': 'Relative humidiy', 'missing_values': '-999.0'}
+
+Variable: pressure_field
+{'units': 'hPa', 'long_name': 'Air pressure field ERA5', 'comments': 'Averaged pressure ', 'missing_values': '-999.0'}
+
+Variable: time_difference_radar_lidar
+{'units': 's', 'long_name': 'time difference between radar and lidar data', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: distance_radar_lidar
+{'units': 'm', 'long_name': 'horizontal distance between radar and lidar data', 'comments': 'distance obtained after colocation in time and altitude', 'missing_values': '-999.0'}
+
+Variable: height_ground
+{'units': 'km', 'long_name': 'Ground elevation', 'comments': 'SRTM data - http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm', 'missing_values': '-999.0'}
+
+Variable: rali_instrument_flag_532
+{'units': 'none', 'long_name': 'Radar-lidar instrument flag (532 nm)', 'comments': "-10:unknown/-9:no radar and no lidar/-8:subsurface only lidar/-7:subsurface only radar/-6:subsurface lidar and radar/-5:surface only lidar/-4:surface only radar/-3:surface lidar and radar/-2:close range radar/-1:close range lidar/0:radar and lidar agree on clear sky/1:radar don't detect anything and lidar is not available/2:radar don't detect anything and lidar is noise/3:radar don't detect anything and lidar is not noise/4:lidar detects cloud, aerosol or precipitation and nothing on radar/5:radar and lidar detect particules/6:radar detects but lidar extinguished/7:radar detects but lidar not available/8:radar detects ghost echo lidar is not available/9:radar detects ghost echo lidar is available/10:radar very strongly attenuated", 'missing_values': np.int64(-11)}
+
+Variable: rali_instrument_flag_355
+{'units': 'none', 'long_name': 'Radar-lidar instrument flag (355 nm)', 'comments': "-10:unknown/-9:no radar and no lidar/-8:subsurface only lidar/-7:subsurface only radar/-6:subsurface lidar and radar/-5:surface only lidar/-4:surface only radar/-3:surface lidar and radar/-2:close range radar/-1:close range lidar/0:radar and lidar agree on clear sky/1:radar don't detect anything and lidar is not available/2:radar don't detect anything and lidar is noise/3:radar don't detect anything and lidar is not noise/4:lidar detects cloud, aerosol or precipitation and nothing on radar/5:radar and lidar detect particules/6:radar detects but lidar extinguished/7:radar detects but lidar not available/8:radar detects ghost echo lidar is not available/9:radar detects ghost echo lidar is available/10:radar very strongly attenuated", 'missing_values': np.int64(-11)}
+
+Variable: rali_target_classification_532
+{'units': 'none', 'long_name': 'Radar-lidar target classification (532 nm)', 'comments': '-6: unknown/-5: underground no signal/-4: underground (radar)/-3: ground detected by radar and lidar/-2: ground (lidar) /-1: ground (radar)/0: clear sky confirmed by lidar/1: clear sky for radar/2: liquid and warm rain/3: ice cloud/4: supercooled/5: mixed phase/6: melting layer (radar)/7: cold rain', 'missing_values': np.int64(-9)}
+
+Variable: rali_target_classification_355
+{'units': 'none', 'long_name': 'Radar-lidar target classification (355 nm)', 'comments': '-6: unknown/-5: underground no signal/-4: underground (radar)/-3: ground detected by radar and lidar/-2: ground (lidar) /-1: ground (radar)/0: clear sky confirmed by lidar/1: clear sky for radar/2: liquid and warm rain/3: ice cloud/4: supercooled/5: mixed phase/6: melting layer (radar)/7: cold rain', 'missing_values': np.int64(-9)}
+
+Variable: rasta_flag
+{'units': 'none', 'long_name': 'Flag - Data description', 'comments': '-4: nadir not available / -3: Last gates not valid / -2: First gates not valid / -1: beyond maximum range / 0: no cloud / 1: cloud or precipitation / 2: possible cloud / 3: ground echo / 4: ghost ground echo (downward domain) / 5: ghost ground echo (upward domain) / 6: underground signal / 7: underground noise / 8: Z can be interpolated', 'missing_values': '-999.0'}
+
+Variable: rasta_flag_Z_interpolated
+{'units': 'none', 'long_name': 'Flag dedicated to interpolated Z', 'comments': '0: no interpolation / 1: interpolated but data available / 2: interpolated and no data available / 3: ghost ground echo (upward) is interpolated', 'missing_values': '-999.0'}
+
+Variable: rasta_mask_domain
+{'units': 'none', 'long_name': 'Domain Mask', 'comments': 'This mask identifies the valid data above and below the aircraft (-4: nadir only possible cloud / -3: nadir only confident / -2: 3 antennas and nadir possible cloud / -1: 3 antennas and nadir confident / 0: no data / 1: 3 antennas and zenith confident / 2: 3 antennas and zenith possible cloud / 3: zenith only confident / 4: zenith only possible cloud)', 'missing_values': '-999.0'}
+
+Variable: rasta_mask_horizontal_wind
+{'units': 'none', 'long_name': 'Mask for the horizontal wind', 'comments': '1: good confidence /-1: should not be used', 'missing_values': '-999.0'}
+
+Variable: rasta_mask_Vz
+{'units': 'none', 'long_name': 'Mask for the Vz component of the wind', 'comments': '1: good confidence /-1: should not be used/-2: should not be used (too far from mean)', 'missing_values': '-999.0'}
+
+Variable: rasta_melting_altitude
+{'units': 'km', 'long_name': 'Melting layer altitude', 'comments': 'Altitude of the melting layer (derived from Z, V and model temperature)', 'missing_values': '-999.0'}
+
+Variable: rasta_Vz
+{'units': 'm s-1', 'long_name': 'Vz, Vertical component of the retrieved 3D wind', 'comments': 'Vz, positive upward', 'missing_values': '-999.0'}
+
+Variable: rasta_VE
+{'units': 'm s-1', 'long_name': 'VE, Eastward Wind component of the retrieved 3D wind', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: rasta_VN
+{'units': 'm s-1', 'long_name': 'VN, Northward Wind component of the retrieved 3D wind', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: rasta_ocean_surface_reflectivity
+{'units': 'dBZ', 'long_name': 'Ocean surface reflectivity measured by nadir antenna', 'comments': 'ground return peak and gates in the neighbourhood', 'missing_values': '-999.0'}
+
+Variable: rasta_ocean_surface_reflectivity_model
+{'units': 'dBZ', 'long_name': 'Simulated Ocean surface reflectivity', 'comments': 'radar wind is used to parameterise the s0 model (not corrected for attenuation)', 'missing_values': '-999.0'}
+
+Variable: rasta_wind_direction
+{'units': 'degrees', 'long_name': 'Direction of the retrieved 3D wind', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: rasta_wind_speed
+{'units': 'm s-1', 'long_name': 'Speed of the retrieved 3D wind', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: rasta_gaseous_twowayatt
+{'units': 'dB', 'long_name': 'Gaseous two way attenuation ERA5', 'comments': 'From Liebe at 95GHz', 'missing_values': '-999.0'}
+
+Variable: rasta_classification_flag
+{'units': 'none', 'long_name': 'Radar classification flag', 'comments': '-4: ghost ground echo (upward domain) / -3: ghost ground echo (downward domain) / -2: underground / -1 : ground / 0: no cloud / 1: ice only Z / 2: ice both Z and V / 3: liquid and warm rain / 4: melting layer / 5: cold rain', 'missing_values': '-999.0'}
+
+Variable: rasta_classification_flag_updated
+{'units': 'none', 'long_name': 'Updated radar classification flag for combination with lidar flag', 'comments': '-7: nadir not available / -6: beyond maximum range / -5: underground noise / -4: ghost ground echo (upward domain) / -3: ghost ground echo (downward domain) / -2: underground / -1 : ground / 0: no cloud / 1: ice only Z / 2: ice both Z and V / 3: liquid and warm rain / 4: melting layer / 5: cold rain', 'missing_values': np.int64(-9)}
+
+Variable: lng_cal_att_back_355_cross
+{'units': 'm-1 sr-1', 'long_name': 'calibrated cross attenuated backscatter 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_cal_att_back_355_par
+{'units': 'm-1 sr-1', 'long_name': 'calibrated parallel attenuated backscatter 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_cal_att_back_532
+{'units': 'm-1 sr-1', 'long_name': 'calibrated attenuated backscatter 532', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_cal_att_mol_back_355
+{'units': 'm-1 sr-1', 'long_name': 'calibrated total attenuated molecular backscatter 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_cal_att_mol_back_355_cross
+{'units': 'm-1 sr-1', 'long_name': 'calibrated cross attenuated molecular backscatter 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_cal_att_mol_back_355_par
+{'units': 'm-1 sr-1', 'long_name': 'calibrated parallel attenuated molecular backscatter 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_cal_att_part_back_355
+{'units': 'm-1 sr-1', 'long_name': 'calibrated total attenuated particular backscatter 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_cal_att_part_back_355_cross
+{'units': 'm-1 sr-1', 'long_name': 'calibrated cross attenuated particular backscatter 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: lng_cal_att_part_back_355_par
+{'units': 'm-1 sr-1', 'long_name': 'calibrated parallel attenuated particular backscatter 355', 'comments': '', 'missing_values': '-999.0'}
+
+Variable: rasta_Z
+{'units': 'dBZ', 'long_name': 'Radar reflectivity', 'comments': 'Produced using the Pulse-Pair Processing. Range-corrected and calibrated', 'missing_values': '-999.0'}
+
+Variable: rasta_Z_interpolated
+{'units': 'dBZ', 'long_name': 'Radar reflectivity (interpolated when possible between upward and downward domains)', 'comments': 'Produced using the Pulse-Pair Processing. Range-corrected and calibrated', 'missing_values': '-999.0'}

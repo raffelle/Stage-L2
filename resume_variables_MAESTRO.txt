@@ -1,0 +1,61 @@
+
+Résumé des variables du fichier NetCDF (MAESTRO - Radar/Lidar)
+
+Dimensions:
+-----------
+- time (6147 valeurs)
+- range (500 valeurs)
+
+Coordonnées:
+------------
+- time, range
+- latitude, longitude, altitude (1D)
+- latitude_2D, longitude_2D, height_ground (2D)
+
+Catégories de variables:
+------------------------
+
+1. Géolocalisation:
+   - latitude, longitude, altitude : Position GPS de l'avion
+   - latitude_2D, longitude_2D : Coordonnées GPS en 2D (temps x distance)
+   - height_ground : Altitude du sol (SRTM)
+
+2. Vent / Mouvement (avion + RASTA):
+   - aircraft_vh, aircraft_vz : Vitesse horizontale / verticale avion
+   - heading, roll, pitch : Orientation de l’avion (cap, roulis, tangage)
+   - rasta_Vz, rasta_VE, rasta_VN : Composantes du vent (verticale, Est, Nord)
+   - rasta_wind_direction, rasta_wind_speed : Direction / vitesse du vent 3D
+   - eastward_wind, northward_wind : Vent in-situ (ERA5)
+
+3. Thermodynamique (ERA5):
+   - temperature_field : Température de l'air
+   - rh_field : Humidité relative
+   - pressure_field : Pression atmosphérique
+
+4. Radar (RASTA):
+   - rasta_Z : Réflectivité radar
+   - rasta_Z_interpolated : Réflectivité interpolée
+   - rasta_flag, rasta_flag_Z_interpolated : Drapeaux qualité / interpolation
+   - rasta_mask_* : Masques d’utilisation des données
+   - rasta_melting_altitude : Altitude de la couche de fusion
+   - rasta_classification_flag, *_updated : Classifications radar
+   - rasta_ocean_surface_reflectivity, *_model : Réflectivité de la surface océanique
+   - rasta_gaseous_twowayatt : Atténuation gazeuse (95 GHz)
+
+5. Lidar (LNG):
+   - lng_LOS_Doppler_Velocity : Vitesse Doppler corrigée
+   - lng_pointing : Direction du faisceau (Nadir / Zenith)
+   - lng_height_2D, lng_latitude_2D : Hauteur / latitude co-localisées radar
+   - lng_depol_total, lng_depol_part : Dépolarisation totale / particulaire
+   - lng_cal_att_* : Rétrodiffusion atténuée calibrée (355 & 532 nm)
+
+6. Masques et classifications lidar:
+   - lng_mask_355, lng_mask_532, lng_mask_hsr, lng_mask_depol, lng_mask_Doppler
+   - lng_target_classification_355, *_532 : Classification des cibles (nuages, aérosols, etc.)
+
+7. Radar-lidar combiné (RALI):
+   - rali_instrument_flag_355, *_532 : Types de détection radar/lidar
+   - rali_target_classification_355, *_532 : Classifications combinées (ex. pluie froide = 7)
+   - time_difference_radar_lidar : Décalage temporel
+   - distance_radar_lidar : Distance horizontale
+
