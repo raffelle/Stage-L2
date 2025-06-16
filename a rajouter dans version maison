@@ -1,0 +1,79 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+print("distribution de la dépolarisation particulaire à 355 nm et types d’aérosols") 
+
+# 1. Données lidar
+backscatter = rali.lng_cal_att_part_back_355  # [sr⁻¹·m⁻¹]
+depol = rali.lng_depol_part  # [sans unité]
+
+# 2. Filtrage sur les valeurs physiques du backscatter et qualité de mesure
+mask_valide = (backscatter > 0) & (backscatter < 1e-3) & (rali.M >= 0)
+
+# 3. Extraction de la dépolarisation dans ces zones
+depol_dense = depol[mask_valide]
+depol_dense = depol_dense[(depol_dense > 0) & (depol_dense < 1)]
+
+# 4. Histogramme
+bins = 300
+min_x, max_x = depol_dense.min(), depol_dense.max()
+hist, bin_edges = np.histogram(depol_dense, bins=bins, range=(min_x, max_x))
+bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+
+# 5. Seuil de fréquence
+threshold = 10
+valid_bins = hist >= threshold
+valid_indices = np.where(valid_bins)[0]
+
+# 6. Limites d'affichage sur x en fonction du seuil
+if valid_indices.size > 0:
+    xlim_min = bin_edges[valid_indices[0]]
+    xlim_max = bin_edges[valid_indices[-1] + 1]
+else:
+    xlim_min, xlim_max = min_x, max_x
+
+# 7. Tracé avec nouvelles catégories
+plt.figure(figsize=(10, 5))
+
+plt.axvspan(0.00, 0.04, color='dodgerblue', alpha=0.6, zorder=2,
+    label="Très faible dépolarisation (δ < 4 %)\n(e.g. pollution urbaine, fumée de forêt, aérosols marins « propres »)")
+
+plt.axvspan(0.04, 0.09, color='saddlebrown', alpha=0.5, zorder=2,
+    label="Faible dépolarisation (4 % ≤ δ < 9 %)\n(e.g. aérosols marins « secs »)")
+
+plt.axvspan(0.09, 0.20, color='goldenrod', alpha=0.5, zorder=2,
+    label="Dépolarisation modérée (9 % ≤ δ < 20 %)\n(e.g. mélanges poussière + fumée/pollution)")
+
+plt.axvspan(0.20, 0.50, color='firebrick', alpha=0.6, zorder=2,
+    label="Forte dépolarisation (δ ≥ 20 %)\n(e.g. poussière saharienne, cendres volcaniques)")
+
+
+
+# Histogramme
+plt.bar(bin_centers[valid_bins], hist[valid_bins],
+        width=(bin_edges[1] - bin_edges[0]),
+        color='orchid', edgecolor='k',
+        label=f'Dépolarisation (fréquence ≥ {threshold})', zorder=10)
+
+# Axes
+plt.yscale('log')
+plt.ylabel("Fréquence d'occurrence (échelle logarithmique)")
+plt.grid(True, which="both", linestyle="--", linewidth=0.5)
+plt.legend(loc="upper right")
+
+# Limites et format pour axe x en pourcentage
+plt.xlim(xlim_min, min(xlim_max, 0.45))
+xticks = plt.xticks()[0]
+plt.xticks(xticks, [f"{x*100:.1f} %" for x in xticks])
+plt.xlabel("Dépolarisation particulaire à 355 nm (%)")
+
+plt.tight_layout()
+plt.show()
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+| Classe de dépolarisation   | Intervalle δ (en %) | Exemples d’aérosols                                            |
+| -------------------------- | ------------------- | -------------------------------------------------------------- |
+| Très faible dépolarisation | 0 % ≤ δ < 4 %       | Pollution urbaine, fumée de forêt, aérosols marins « propres » |
+| Faible dépolarisation      | 4 % ≤ δ < 9 %       | Aérosols marins « secs »                                       |
+| Dépolarisation modérée     | 9 % ≤ δ < 20 %      | Mélanges poussière + fumée/pollution                           |
+| Forte dépolarisation       | δ ≥ 20 %            | Poussière saharienne, cendres volcaniques                      |
+
